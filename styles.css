@@ -225,15 +225,36 @@ form .btn {
         
     }
     #imm{
-       width: 300px;
+       
+       margin-left:10px ;
+       width: 10px;
        
 
     }
+    #im{
+       
+        margin-left:20px;
+        width: 300px;
+        
+ 
+     }
     
     #gss{
         display: none;
         
          
+    }
+    #ski{
+        width: 350px;
+        margin-left: 10px;
+        padding-top: 20px;
+        
+
+    }
+    #dsaa p{
+        margin-left: 10px;
+        font-size: 16px;
+        padding-bottom: 30px;
     }
     #gss2{
         
