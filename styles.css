@@ -192,8 +192,8 @@ form .btn {
         background-size: contain;
         height: ;
        background-repeat: no-repeat;
-       background-position-x: -200px;
-       background-position-y: -300px;
+       background-position-x: -100px;
+       background-position-y: 0px;
         
         
         align-items: center;
