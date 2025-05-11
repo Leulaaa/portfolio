@@ -231,6 +231,9 @@ form .btn {
        
 
     }
+    #about{
+        
+    }
     #im{
        
         margin-left:20px;
@@ -238,6 +241,7 @@ form .btn {
         
  
      }
+     
     
     #gss{
         display: none;
@@ -245,7 +249,7 @@ form .btn {
          
     }
     #ski{
-        width: 350px;
+        width: 300px;
         margin-left: 10px;
         padding-top: 20px;
         
