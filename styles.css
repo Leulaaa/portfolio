@@ -190,7 +190,7 @@ form .btn {
     .parallax-section {
         background: url('img/background4.jpg') no-repeat center center fixed;
         background-size: contain;
-        height:82vh ;
+        height:80vh ;
        background-repeat: no-repeat;
        background-position-x: 0px;
        background-position-y: 50px;
@@ -219,19 +219,17 @@ form .btn {
        
     }
     #abzz{
-       
+        width: 400px;
+        
     margin-left: 0px;
         
     }
     #imm{
-       width: 400px;
+       width: 300px;
        
 
     }
-    #dsaa{
-        
-        
-    }
+    
     #gss{
         display: none;
         
