@@ -216,18 +216,18 @@ form .btn {
         opacity: 1;
         color: #fff;
         z-index: 0px;
-        
+        width: 425px;
         
     }
     #svg-hero{
-        width: 400px;
+        width: 495px;
 
     }
     #svg-wave {
         position: absolute;
         bottom: 0;
         
-        left:0px;
+        left:-40px;
        
     }
 
@@ -235,6 +235,7 @@ form .btn {
         display: block;
         margin-left:0px;
         padding: 0px;
+        width: 400px;
         
      }
      #dsaa{
