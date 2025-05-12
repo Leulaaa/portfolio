@@ -174,6 +174,18 @@ form .btn {
     margin-left: 40px;
    
 }
+#abzz1{
+    display: flex;
+    margin-left: 100px;
+ }
+ #dsaa{
+    padding-left: 50px;
+    margin-left: 20px;
+ }
+ #imm{
+    
+   
+ }
 @media (max-width:768px){
     #naa{
        
@@ -218,30 +230,26 @@ form .btn {
         left:0px;
        
     }
-    #abzz{
-        width: 400px;
-        
-    margin-left: 0px;
-        
-    }
-    #imm{
-       
-       margin-left:10px ;
-       width: 10px;
-       
 
-    }
-    #about{
-        
-    }
-    #im{
-       
-        margin-left:20px;
-        width: 300px;
-        
- 
+    #abzz1{
+        display: block;
+        margin-left:0px;
+        padding: 0px;
      }
-     
+     #dsaa{
+        padding-left: 10px;
+        margin-left: 0px;
+     }
+     #abzz1 img:hover {
+        box-shadow: none;
+        transform: none;
+    }
+    #ia{
+        padding: 0px;
+        border: 0px;
+       width: 300px;
+       
+    }
     
     #gss{
         display: none;
@@ -289,6 +297,7 @@ form .btn {
         
        
     }
+    
     #portfolio{
         
     }
