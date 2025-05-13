@@ -207,6 +207,8 @@ form .btn {
         font-weight: 400;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 0.5rem;
+       
+        
     }
     .parallax-section {
         background: url('img/background4.jpg') no-repeat center center fixed;
@@ -244,7 +246,7 @@ form .btn {
         display: block;
         margin-left:0px;
         padding: 0px;
-        
+       
         
      }
      #dsaa{
@@ -262,11 +264,7 @@ form .btn {
 
     }
     
-    #gss{
-        display: none;
-        
-         
-    }
+    
     #ski{
         width: 300px;
         margin-left: 10px;
@@ -279,21 +277,26 @@ form .btn {
         font-size: 16px;
         padding-bottom: 30px;
     }
+    #gss3{
+       padding: 10px 20px;
+      
+    background: linear-gradient(90deg, rgba(4, 247, 255, 0.411) 0%, rgba(29, 27, 27, 0.432) 60%);
+        
+         
+    }
     #gss2{
         
        
-        width: 400px;
-        margin-left: -75px;
+       
     }
-    #gss1{
+    #z{
         
-        
+        width: 350px;
        
     }
     #zaay{
         display:block;
-        width: 400px;
-        margin-left: -75px;
+        
     }
     #zq{
     
@@ -304,7 +307,7 @@ form .btn {
        
     }
     #zzv img{
-        width: 300px;
+        
         
        
     }
