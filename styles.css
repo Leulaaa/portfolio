@@ -323,12 +323,19 @@ form .btn {
        
         
     }
-    #carousel-container{
-       
+    #carousel-container img{
+       width:80px;
+	    height:70px;
+	    
+        
+    }
+   #carousel-content .section3{
+       margin-left:-100px;
+	    
         
     }
     #section4{
-      display: none;
+      width:350px;
     }
     #contact{
         
