@@ -226,7 +226,7 @@ form .btn {
         opacity: 1;
         color: #fff;
         z-index: 0px;
-        
+       height: 700px;
         
     }
     #svg-hero{
