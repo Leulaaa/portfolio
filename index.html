@@ -30,6 +30,16 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <!-- Font Google -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!---Unicons-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -655,40 +665,40 @@
      <section id="num2">
         <nav id="naa" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+            <div class="nav__menu__ btn"id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+            
+                <ul id="nav-links" class="nav__links">
+                    <li class="nav-item" id="ssaq">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Me</a>
+                    <li class="nav-item" id="ssaq">
+                        <a class="nav-link" href="#about3">About Me</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="ssaq">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="ssaq">
                         <a class="nav-link" href="#itt">My Skils</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="ssaq">
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="ssaq">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-            </div>
+            
         </nav>
     
         <!-- Home Section with Parallax Effect -->
         <section id="home" class="parallax-section">
             <div>
-            <div class="container text-left " id="fg">
-                <h1 id="cssa" >Hellow <br>I'm <ins id="le">LEUL GETACHEW</ins> </h1 >
-                <h1 id="cssa" >Full Stack Web Developer</h1>
-            </div>
+           <div class="container text-left " id="fg">
+            <h1 id="cssa" data-aos="fade-left">Hellow <br>I'm <ins id="le">LEUL GETACHEW</ins> </h1 >
+            <h1 id="cssa" data-aos="fade-right">Full Stack Web Developer</h1>
+        </div>
             
             <span id="svg-wave" class="svg-wave"> <img id="svg-hero" class="svg-hero" src="img/applight-wave.svg" width=""> </span>
             
@@ -698,7 +708,7 @@
            </div>
        
         <!-- About Section -->
-        <section id="about" class="" >
+        <section id="about" class="about3"data-aos="fade-up">
             <div id="abb">
             <div id="abzz" >
                 <div id="abzz1" >
@@ -707,7 +717,7 @@
                             <img id="ia" src="img/profile.png" alt="Profile Image" class="">
                         </div>
                    
-                    <div id="dsaa" class="col-md-6" >
+                    <div id="dsaa" class="col-md-6" data-aos="fade-left" >
                         <h1 class="text-center mb-4">About <ins id="le">Me</ins></h1>
                         <p class="about-text mb-4">I am a full-stack web developer with a passion for creating dynamic and responsive websites. My expertise includes HTML, CSS, JavaScript, PHP, Bootstrap, and MySQL. I strive to write clean, efficient code and deliver high-quality projects.</p>
                         
@@ -749,12 +759,12 @@
                     <div id="gss3">
                         <h1 class="text-center mb-3 mt-5">Achievements &  <ins id="le">Experience</ins> </h1>
                         <div id="gss1" class="timeline">
-                            <div id="gss2" class="timeline-item" >
+                            <div id="gss2" class="timeline-item" data-aos="fade-left" >
                                 <h4>Frontend Developer Instructor at Ennlite Academy</h4>
                                 <p><span class="indate">November 2023</span></p>
                                 <p>As a Front-End Developer Instructor at Ennlite Academy, I have played a pivotal role in shaping the next generation of web developers by providing top-tier education in front-end technologies. My responsibilities span across curriculum design,  student mentorship, and industry engagement, all aimed at equipping students with the skills and knowledge required to thrive in the tech industry.</p>
                             </div>
-                            <div id="gss2" class="achievement" >
+                            <div id="gss2" class="achievement" data-aos="fade-right">
                                 <h4>Achievements in Projects</h4>
                                 <ul>
                                     <li>I Developed a Coffee Cafe and Shooping webste and i get a Scholarship to learn Backend website development at Ennlite Academy</li>
@@ -770,14 +780,14 @@
                             <div id="zaay" class="achievement">
                                
                                 
-                                <ul id="z" >
+                                <ul id="z" data-aos="fade-left" >
                                     <li><img src="img/udacity.png" alt="" id="z"><br> <div id="sds" class="text-left mt-4"></div>
                                         <a href="path/Udacity certificate .pdf" class=" "id="fd" download>Download Certificate</a><br>
                                     <br>Certified Front-End Developer</li>
                                     <!-- <li>Advanced JavaScript Certification</li> -->
                                 </ul><br>
                                 
-                                <ul id="z" >
+                                <ul id="z" data-aos="fade-up">
                                     <li><img src="img/ennlite1.jpg" alt="" id="z"><br> <br>Certified Full-Stack Web Developer</li>
                                     <!-- <li>Advanced JavaScript Certification</li> -->
                                 </ul >
@@ -804,12 +814,12 @@
         
     
         <!-- Portfolio Section -->
-        <section id="portfolio" class="section bg-light py-5" >
+        <section id="portfolio" class="section bg-light py-5" data-aos="fade-down">
             <div class="container">
-                <h1  class="text-center mb-4">Portfolio</h1>
+                <h1  class="text-center mb-4" data-aos="fade-left">Portfolio</h1>
         
                 <!-- Filter Buttons -->
-                <div class="text-center mb-4" >
+                <div class="text-center mb-4" data-aos="fade-right">
                     <button class="btn btn-primary filter-button"id="fd" data-filter="all">All</button>
                     <button class="btn btn-secondary filter-button"id="fd" data-filter="web">Frontend Websites</button>
                     <button class="btn btn-secondary filter-button"id="fd" data-filter="mobile">Backend Websites</button>
@@ -957,7 +967,7 @@
     
         <!-- Gallery Section with Owl Carousel -->
         <section id="section4" class="section4" >
-            <div class="container" id="itt">
+            <div class="container" id="itt1">
                 <h1 class="text-center mb-4">My <ins id="le">Skills</ins></h1><br>
                 
             <div id="carousel-container">
@@ -1282,6 +1292,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script src="js/scripts.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easing/1.4.1/jquery.easing.min.js"></script>
 
 </body>
