@@ -211,25 +211,30 @@ function initMap() {
 }
 
 // Handle form submission
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
     var formData = new FormData(this);
 
-    fetch('submit_form.php', {
+    fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('formResponse').innerHTML = '<div class="alert alert-success">Your message has been sent successfully!</div>';
-        document.getElementById('contactForm').reset();
+        if(data.success) {
+            document.getElementById('formResponse').innerHTML = '<div class="alert alert-success">Your message has been sent successfully!</div>';
+            document.getElementById('contactForm').reset();
+        } else {
+            document.getElementById('formResponse').innerHTML = '<div class="alert alert-danger">' + (data.message || 'An error occurred. Please try again.') + '</div>';
+        }
     })
     .catch(error => {
         console.error('Error:', error);
         document.getElementById('formResponse').innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
     });
 });
+
 
 // Load Google Maps script
 function loadScript() {
@@ -240,25 +245,90 @@ function loadScript() {
 }
 loadScript();
 // Handle Newsletter Form Submission
-document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    var formData = new FormData(this);
+    const form = this;
+    let valid = true;
 
-    fetch('subscribe_newsletter.php', {
+    // Clear all error messages
+    form.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+    document.getElementById('formResponse').innerHTML = '';
+
+    // Validate Name (required)
+    if (!form.name.value.trim()) {
+        form.querySelector('#name + .error-message').textContent = 'Name is required.';
+        valid = false;
+    }
+
+    // Validate Email (required and pattern)
+    const email = form.email.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+        form.querySelector('#email + .error-message').textContent = 'Email is required.';
+        valid = false;
+    } else if (!emailPattern.test(email)) {
+        form.querySelector('#email + .error-message').textContent = 'Please enter a valid email address.';
+        valid = false;
+    }
+
+    // Validate Phone (optional, but if filled must be valid)
+    const phone = form.phone.value.trim();
+    const phonePattern = /^[0-9+\-\s()]*$/;
+    if (phone && !phonePattern.test(phone)) {
+        form.querySelector('#phone + .error-message').textContent = 'Please enter a valid phone number.';
+        valid = false;
+    }
+
+    // Validate Message (required, min 10 chars)
+   
+
+    // Validate reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        document.getElementById('recaptcha-error').textContent = 'Please verify that you are not a robot.';
+        valid = false;
+    } else {
+        document.getElementById('recaptcha-error').textContent = '';
+    }
+
+    if (!valid) {
+        return; // Stop if validation failed
+    }
+
+    // Disable submit button and show loading state
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+
+    // Prepare form data
+    const formData = new FormData(form);
+    formData.append('g-recaptcha-response', recaptchaResponse);
+
+    fetch(form.action, {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
-        alert('Thank you for subscribing to our newsletter!');
-        document.getElementById('newsletterForm').reset();
+        if (data.success) {
+            document.getElementById('formResponse').innerHTML = '<div class="alert alert-success">Your message has been sent successfully!</div>';
+            form.reset();
+            grecaptcha.reset();
+        } else {
+            document.getElementById('formResponse').innerHTML = `<div class="alert alert-danger">${data.message || 'An error occurred. Please try again.'}</div>`;
+        }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('An error occurred. Please try again.');
+        document.getElementById('formResponse').innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send';
     });
 });
+
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $('a.nav-link').on('click', function(event) {
